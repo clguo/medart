@@ -9,10 +9,6 @@ This repo features a PyTorch implementation for the paper [**Med-Art: Diffusion 
 It contains:
 
 
-* ⚡️ Pre-trained class-conditional DiT models trained on ImageNet (512x512 and 256x256)
-* 💥 A self-contained [Hugging Face Space](https://huggingface.co/spaces/wpeebles/DiT) and [Colab notebook](http://colab.research.google.com/github/facebookresearch/DiT/blob/main/run_DiT.ipynb) for running pre-trained DiT-XL/2 models
-* 🛸 An improved DiT [training script](train.py) and several [training options](train_options)
-
 ## Setup
 
 First, download and set up the repo:
