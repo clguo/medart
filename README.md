@@ -48,7 +48,7 @@ pip install .
 ## Training
 The weights from PixArt-α will be downloaded automatically.
 ```bash
-dataset_id="/work3/chagu/dataset/kvasir/train"
+dataset_id="dataset/kvasir/train"
 model_id=PixArt-alpha/PixArt-XL-2-512x512
 accelerate launch  --mixed_precision="bf16" --num_processes=1 --main_process_port=36667  medart.py \
   --pretrained_model_name_or_path=$model_id \
@@ -78,3 +78,4 @@ accelerate launch  --mixed_precision="bf16" --num_processes=1 --main_process_por
 ```bash
 python sample.py
 ```
+![Med-Art Samples](img/sota.png)
