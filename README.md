@@ -6,9 +6,6 @@
 
 This repo features a PyTorch implementation for the paper [**Med-Art: Diffusion Transformer for Text-to-Image Generation in Medical Domain**]
 
-It contains:
-
-
 ## Setup
 
 First, download and set up the repo:
