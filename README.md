@@ -78,4 +78,5 @@ accelerate launch  --mixed_precision="bf16" --num_processes=1 --main_process_por
 ```bash
 python sample.py
 ```
+## Quantitative analysis.
 ![Med-Art Samples](img/sota.png)
