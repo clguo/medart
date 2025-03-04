@@ -22,7 +22,7 @@ cd medart
 conda create -n medart python=3.10 -y
 conda activate medart
 ```
-* 🪐 Installation of **Llava-Next** and its dependencies, along with code for **image-to-text generation (Visual Symptom Generator) [implementation](models.py)**
+* 🪐 Installation of **Llava-Next** and its dependencies, along with code for **image-to-text generation (Visual Symptom Generator)
   Ensure installation is performed in a GPU environment.
 ```bash
 cd medart/LLaVA-NeXT
