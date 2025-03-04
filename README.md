@@ -74,26 +74,6 @@ accelerate launch  --mixed_precision="bf16" --num_processes=1 --main_process_por
 ```
 
 
-```bash
-python sample.py --image-size 512 --seed 1
-```
-
-For convenience, our pre-trained DiT models can be downloaded directly here as well:
-
-| DiT Model     | Image Resolution | FID-50K | Inception Score | Gflops | 
-|---------------|------------------|---------|-----------------|--------|
-| [XL/2](https://dl.fbaipublicfiles.com/DiT/models/DiT-XL-2-256x256.pt) | 256x256          | 2.27    | 278.24          | 119    |
-| [XL/2](https://dl.fbaipublicfiles.com/DiT/models/DiT-XL-2-512x512.pt) | 512x512          | 3.04    | 240.82          | 525    |
-
-
-**Custom DiT checkpoints.** If you've trained a new DiT model with [`train.py`](train.py) (see [below](#training-dit)), you can add the `--ckpt`
-argument to use your own checkpoint instead. For example, to sample from the EMA weights of a custom 
-256x256 DiT-L/4 model, run:
-
-```bash
-python sample.py --model DiT-L/4 --image-size 256 --ckpt /path/to/model.pt
-```
-
 
 ## Training
 ### Preparation Before Training
