@@ -82,5 +82,5 @@ python sample.py
 ![Med-Art Samples](img/sota.png)
 
 ### Acknowledgment
-Code is built on [LLaVA-NeXT]([https://openreview.net/forum?id=9t24EBSlZOa](https://github.com/LLaVA-VL/LLaVA-NeXT)), [diffusers](https://github.com/huggingface/diffusers), and [PixArt-a](https://github.com/PixArt-alpha/PixArt-alpha).
+Code is built on [LLaVA-NeXT](https://github.com/LLaVA-VL/LLaVA-NeXT), [diffusers](https://github.com/huggingface/diffusers), and [PixArt-a](https://github.com/PixArt-alpha/PixArt-alpha).
 
