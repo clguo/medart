@@ -19,7 +19,7 @@ cd medart
 ```
 
 ```bash
-conda create -n medart python=3.10 
+conda create -n medart python=3.10 -y
 conda activate medart
 ```
 * 🪐 Installation of **Llava-Next** and its dependencies, along with code for **image-to-text generation (Visual Symptom Generator) [implementation](models.py)**
@@ -38,14 +38,17 @@ Save the generated CSV as metadata.csv (with the first column as file_name and t
 * 💥 Install diffusers.
 Do not use the official diffusers here, as it is necessary to ensure that DPM Solver++ supports backpropagation.
 ```bash
+cd medart
+pip install -r requirements.txt
 cd medart/diffusers
 pip install .
+
 ```
 
 ## Training
 The weights from PixArt-α will be downloaded automatically.
 ```bash
-dataset_id="dataset/kvasir/train"
+dataset_id="/work3/chagu/dataset/kvasir/train"
 model_id=PixArt-alpha/PixArt-XL-2-512x512
 accelerate launch  --mixed_precision="bf16" --num_processes=1 --main_process_port=36667  medart.py \
   --pretrained_model_name_or_path=$model_id \
@@ -64,14 +67,14 @@ accelerate launch  --mixed_precision="bf16" --num_processes=1 --main_process_por
   --output_dir="medart" \
   --gradient_checkpointing \
   --checkpoints_total_limit=10 \
-  --max_token_length=120\
-  --M_times=20\
+  --max_token_length=120 \
+  --M_times=20 \
   --N_steps=500 
 ```
 
 
 
-## Training
+## Generation
 ### Preparation Before Training
 To extract ImageNet features with `1` GPUs on one node:
 
