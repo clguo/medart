@@ -36,7 +36,7 @@ t5_model = T5ForConditionalGeneration.from_pretrained(t5_model_name).to(device)
 # File path settings
 image_folder = "dataset/kvasir/train"
 metadata_file = "dataset/kvasir/train/raw.csv"
-output_csv = "dataset/kvasir/train/llavanext_test.csv"
+output_csv = "dataset/kvasir/train/metadata.csv"
 
 # Read metadata.csv file
 metadata = pd.read_csv(metadata_file)
