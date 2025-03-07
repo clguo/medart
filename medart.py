@@ -970,7 +970,7 @@ def main():
                     loss_c =color_distribution_loss(batch["pixel_values"].float(), image.float())
 
                     loss = F.mse_loss(model_pred.float(), target.float(), reduction="mean")
-                    loss = loss + 1/args.M_steps * loss_c
+                    loss = loss + 1/args.M_times * loss_c
                 else:
                     loss = F.mse_loss(model_pred.float(), target.float(), reduction="mean")
 
