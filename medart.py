@@ -907,31 +907,29 @@ def main():
                 print(f"noisy_latents dtype: {noisy_latents.dtype}")
 
                 def color_distribution_loss(gen_images, target_images):
-                    # gen_images 和 target_images 是形状为 (B, C, H, W) 的批量数据
                     batch_size = gen_images.size(0)
 
-                    # 初始化总损失
+                
                     total_loss = 0.0
 
-                    # 对批量中的每个图像计算损失
                     for i in range(batch_size):
                         gen_image = gen_images[i]  # (C, H, W)
                         target_image = target_images[i]  # (C, H, W)
 
-                        # 按通道计算均值和标准差
+
                         gen_mean = gen_image.mean(dim=[1, 2])  # (C,)
                         gen_std = gen_image.std(dim=[1, 2])  # (C,)
                         target_mean = target_image.mean(dim=[1, 2])  # (C,)
                         target_std = target_image.std(dim=[1, 2])  # (C,)
 
-                        # 计算均值和标准差的MSE损失
+            
                         loss_mean = F.mse_loss(gen_mean, target_mean)
                         loss_std = F.mse_loss(gen_std, target_std)
 
-                        # 累加当前图像的损失
+                    
                         total_loss += (loss_mean + loss_std)
 
-                    # 返回批量的平均损失
+                 
                     return total_loss / batch_size
 
 
