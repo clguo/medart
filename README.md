@@ -1,10 +1,10 @@
-## Med-Art: Diffusion Transformer for Text-to-Image Generation in Medical Domain<br><sub>PyTorch Implementation</sub>
+## Med-Art: Diffusion Transformer for 2D Medical Text-to-Image Generation<br><sub>PyTorch Implementation</sub>
 
 
 
 ![Med-Art Samples](img/results.png)
 
-This repo features a PyTorch implementation for the paper [**Med-Art: Diffusion Transformer for Text-to-Image Generation in Medical Domain**]
+This repo features a PyTorch implementation for the paper [**Med-Art: Diffusion Transformer for 2D Medical Text-to-Image Generation**]
 
 ## Setup
 
